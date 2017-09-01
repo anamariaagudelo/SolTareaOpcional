@@ -1,0 +1,30 @@
+<h1>My Heroes</h1>
+<h2>Select Hero</h2>
+<div class="button-row">
+  <button md-fab>Anny</button>
+  <button md-fab color="primary">Pepa</button>
+  <button md-fab color="accent">babis</button>
+  <button md-fab color="warn">capi</button>
+  <button md-fab disabled>leti</button>
+  <button md-fab>Ceci</button>
+</div>
+<h2>Search Heroes</h2>
+    <h3>
+      <md-form-field>
+        <input mdInput [(ngModel)]="id" placeholder="What's your id?">
+      </md-form-field>
+    </h3>
+   <h3>
+      <button md-raised-button (click)="openDialog()">search</button>
+   </h3>
+   <h2>All Heroes</h2>
+   
+   <md-radio-group>
+    <h3><md-radio-button value="1">Anny</md-radio-button></h3>
+    <h3><md-radio-button value="2">Pepa</md-radio-button></h3>
+    <h3><md-radio-button value="3">Babis</md-radio-button></h3>
+    <h3><md-radio-button value="4">Capi</md-radio-button></h3>
+    <h3><md-radio-button value="5">Leti</md-radio-button></h3>
+    <h3><md-radio-button value="6">Ceci</md-radio-button></h3>
+  </md-radio-group>
+   

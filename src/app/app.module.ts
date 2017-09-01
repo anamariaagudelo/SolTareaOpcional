@@ -5,6 +5,14 @@ import { HttpModule }    from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
+//Material Desing
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule} from '@angular/material';
+import {MdDialogModule} from '@angular/material';
+import {MdRadioModule} from '@angular/material';
+import 'hammerjs';
+
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
@@ -23,7 +31,12 @@ import  {AmaterialComponent}    from  './Amaterial.component';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MdButtonModule,
+    MdDialogModule,
+    MdRadioModule
   ],
   declarations: [
     AppComponent,
@@ -37,3 +50,5 @@ import  {AmaterialComponent}    from  './Amaterial.component';
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
+
+export class PizzaPartyAppModule { }
