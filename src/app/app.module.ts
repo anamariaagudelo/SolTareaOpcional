@@ -5,6 +5,14 @@ import { HttpModule }    from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
+//Material Desing
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule} from '@angular/material';
+import {MdDialogModule} from '@angular/material';
+import {MdRadioModule} from '@angular/material';
+import 'hammerjs';
+
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
@@ -15,6 +23,7 @@ import { HeroesComponent }      from './heroes.component';
 import { HeroDetailComponent }  from './hero-detail.component';
 import { HeroService }          from './hero.service';
 import { HeroSearchComponent }  from './hero-search.component';
+import  {AmaterialComponent}    from  './Amaterial.component';
 
 @NgModule({
   imports: [
@@ -22,16 +31,24 @@ import { HeroSearchComponent }  from './hero-search.component';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MdButtonModule,
+    MdDialogModule,
+    MdRadioModule
   ],
   declarations: [
     AppComponent,
     DashboardComponent,
     HeroDetailComponent,
     HeroesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    AmaterialComponent
   ],
   providers: [ HeroService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
+
+export class PizzaPartyAppModule { }
